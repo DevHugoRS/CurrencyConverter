@@ -1,40 +1,41 @@
 # Currency Converter 💱
  
-🚀 Um conversor de moedas moderno e eficiente, desenvolvido em SwiftUI com arquitetura MVVM, que utiliza a ExchangeRate-API para fornecer taxas de câmbio atualizadas em tempo real.
+🚀 A modern and efficient currency converter built with SwiftUI and MVVM architecture, using the ExchangeRate-API to provide real-time exchange rates.
 
-📌 Funcionalidades
+📌 Features
 
-✅ Conversão em tempo real entre diferentes moedas.
-✅ Busca automática da taxa de câmbio usando a API ExchangeRate.
-✅ Interface intuitiva e responsiva feita com SwiftUI.
+✅ Real-time currency conversion between different currencies.
+✅ Automatic exchange rate fetching using the ExchangeRate API.
+✅ Intuitive and responsive UI built with SwiftUI.
 
-🛠️ Tecnologias Utilizadas
-    •    SwiftUI – Para criar uma interface moderna e fluida.
-    •    MVVM (Model-View-ViewModel) – Para organizar o código de forma escalável.
-    •    URLSession – Para realizar requisições HTTP na API de câmbio.
-    •    Combine – Para gerenciamento reativo dos dados (se aplicável).
+🛠️ Technologies Used
+    •    SwiftUI – To create a modern and smooth user interface.
+    •    MVVM (Model-View-ViewModel) – For a scalable and clean architecture.
+    •    URLSession – To perform HTTP requests to the exchange rate API.
 
-🔧 Como Funciona?
+🔧 How It Works?
 
-1️⃣ O usuário seleciona a moeda de origem e a moeda de destino.
-2️⃣ Insere o valor a ser convertido.
-3️⃣ O app busca automaticamente a taxa de câmbio mais recente.
-4️⃣ O valor convertido é exibido instantaneamente.
+1️⃣ The user selects the base currency and target currency.
+2️⃣ Enters the amount to be converted.
+3️⃣ The app automatically fetches the latest exchange rate.
+4️⃣ The converted amount is displayed instantly.
 
-📂 Estrutura do Projeto
+📂 Project Structure
 📂 CurrencyConverterApp
  ├── 📁 Model
- │   ├── CurrencyRate.swift  # Modelo para representar os dados da API
+ │   ├── CurrencyRate.swift  # Model to represent API data
  ├── 📁 ViewModel
- │   ├── CurrencyViewModel.swift  # Lógica da conversão e integração com a API
+ │   ├── CurrencyViewModel.swift  # Conversion logic and API integration
  ├── 📁 Service
- │   ├── CurrencyService.swift  # Classe responsável por buscar as taxas na API
+ │   ├── CurrencyService.swift  # Class responsible for fetching exchange rates
  ├── 📁 View
- │   ├── ContentView.swift  # Interface principal do app
+ │   ├── ContentView.swift  # Main app interface
  
  📜 Melhorias Futuras
 
-🚀 Suporte a mais APIs de câmbio.
-🚀 Histórico detalhado de conversões.
-🚀 Suporte para criptomoedas.
-🚀 Integração com gráficos de variação cambial.
+📜 Future Improvements
+
+🚀 Support for more exchange rate APIs.
+🚀 Detailed conversion history.
+🚀 Cryptocurrency support.
+🚀 Integration with exchange rate charts.

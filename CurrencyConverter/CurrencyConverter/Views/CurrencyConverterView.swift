@@ -12,7 +12,7 @@ struct CurrencyConverterView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            
+
             Text("Conversor de Moedas")
                 .font(.largeTitle)
                 .fontWeight(.bold)

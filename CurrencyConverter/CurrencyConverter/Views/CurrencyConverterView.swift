@@ -21,10 +21,10 @@ struct CurrencyConverterView: View {
                 .keyboardType(.decimalPad)
                 .background(Color(.systemGray6))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 40) //: Forma da Borda
-                        .stroke(Color.black, lineWidth: 2) //:Cor e expessura da Borda
+                    RoundedRectangle(cornerRadius: 10) //: Forma da Borda
+                        .stroke(Color.black, lineWidth: 3) //:Cor e expessura da Borda
                 )
-                .cornerRadius(40)
+                .cornerRadius(10)
                 .padding(.horizontal)
             
             //: Selecionar Moeda
@@ -35,6 +35,13 @@ struct CurrencyConverterView: View {
                     }
                 }
                 .pickerStyle(MenuPickerStyle())
+                .frame(width: 130, height: 40)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10) //: Forma da Borda
+                        .stroke(Color.black, lineWidth: 3) //:Cor e expessura da Borda
+                )
+                .cornerRadius(10)
+                .padding(.horizontal)
                 
                 Text("➡️") //: tenho que olhar melhor
                 
@@ -44,20 +51,30 @@ struct CurrencyConverterView: View {
                     }
                 }
                 .pickerStyle(MenuPickerStyle())
+                .pickerStyle(MenuPickerStyle())
+                .frame(width: 130, height: 40)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10) //: Forma da Borda
+                        .stroke(Color.black, lineWidth: 3) //:Cor e expessura da Borda
+                )
+                .cornerRadius(10)
+                .padding(.horizontal)
                 
             }
+            
+            Text("Resultado: \(viewModel.convertedAmount) \(viewModel.targetCurrency)")
+                .padding()
+                .bold()
             
             //: Button Converter
             Button("Converter") {
                 viewModel.fetchConversionRate()
                 viewModel.convert()
             }
-            .padding()
-            .background(Color.blue)
+            .padding(40)
+            .background(Circle().fill(.blue))
             .foregroundColor(.white)
-            .cornerRadius(40)
             
-            Text("Resultado: \(viewModel.convertedAmount) \(viewModel.targetCurrency)")
             
             Spacer()
         }

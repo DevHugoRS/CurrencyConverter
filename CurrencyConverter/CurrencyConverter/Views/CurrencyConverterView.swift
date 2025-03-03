@@ -12,6 +12,7 @@ struct CurrencyConverterView: View {
 
     var body: some View {
         VStack(spacing: 20) {
+            
             Text("Conversor de Moedas")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -43,7 +44,8 @@ struct CurrencyConverterView: View {
                 .cornerRadius(10)
                 .padding(.horizontal)
                 
-                Text("➡️") //: tenho que olhar melhor
+                Image(systemName: "repeat")
+                    .bold()
                 
                 Picker("Para", selection: $viewModel.targetCurrency) {
                     ForEach(["USD", "EUR", "BRL"], id: \.self) { currency in

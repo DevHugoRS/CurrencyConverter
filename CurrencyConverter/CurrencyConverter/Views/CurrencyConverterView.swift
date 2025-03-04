@@ -77,7 +77,6 @@ struct CurrencyConverterView: View {
             .background(Circle().fill(.blue))
             .foregroundColor(.white)
             
-            
             Spacer()
         }
         .padding()
